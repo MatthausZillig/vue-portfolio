@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HeaderNav/>
+    <img
+      alt="Vue logo"
+      src="../assets/logo.png"
+    >
+    <HeaderNav />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HeaderNav from '@/components/HeaderNav.vue'
+// eslint-disable-next-line import/no-unresolved
+import HeaderNav from '@/components/HeaderNav.vue';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
-    HeaderNav
-  }
-}
+    HeaderNav,
+  },
+};
 </script>
