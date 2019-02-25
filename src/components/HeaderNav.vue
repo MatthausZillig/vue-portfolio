@@ -49,10 +49,13 @@
           id="menuList"
           class="pt-0"
         >
-          <template v-for="(item, index) in items">
-            <!--for in na lista "items"-->
+          <!--for in na lista "items"-->
+          <template
+            v-for="(item, index) in items"
+            id="item"
+          >
             <v-list-tile
-              id="itemlist"
+              :id="item.id"
               :key="item.title"
               router
               :to="item.route"
@@ -83,6 +86,13 @@
               id="divider"
               :key="index"
             />
+            <b-tooltip
+              id="tootip"
+              :key="item.title"
+              :target="item.id"
+              :title="item.title"
+              placement="right"
+            />
           </template>
         </v-list>
       </v-navigation-drawer>
@@ -99,23 +109,28 @@ export default {
       drawer: false,
       rightDrawer: false,
       persistent: true,
+      // array de objetos que preenche o menu lateral
       items: [
         {
+          id: '1',
           title: 'HOME',
           icon: 'home',
           route: '/',
         },
         {
+          id: '2',
           title: 'ABOUT',
           icon: 'account_box',
 
         },
         {
+          id: '3',
           title: 'PORTFOLIO',
           icon: 'dashboard',
 
         },
         {
+          id: '4',
           title: 'CONTACT',
           icon: 'email',
 
@@ -134,10 +149,13 @@ export default {
 /*Variáveis*/
 $aside-color: #41B883!important;
 $aside-font-color: white !important;
-
+$tooltip-color: #333847 !important;
 /*Id's && Classes*/
-.theme--light.v-navigation-drawer {
-  background-color: $aside-color;
-  color: $aside-font-color;
+#tootip {
+  background-color: $tooltip-color;
 }
+  .theme--light.v-navigation-drawer {
+    background-color: $aside-color;
+    color: $aside-font-color;
+  }
 </style>
