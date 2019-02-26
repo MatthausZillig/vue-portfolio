@@ -1,15 +1,19 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <h1>Hello, i'm <span>Matthaus Zillig</span>.</h1>
-      <h1>I'm a Front-end web developer.</h1>
+      <h1 class="font-weight-bold">
+        Hello, i'm <span>Matthaus Zillig</span>.
+      </h1>
+      <h1 class="font-weight-bold">
+        I'm a Front-end web developer.
+      </h1>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HeaderNav',
+  name: 'Home',
   data() {
     return {
     //
